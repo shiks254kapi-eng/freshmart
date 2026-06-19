@@ -60,13 +60,13 @@ export default function Dashboard() {
         div >
         <
         div className = "page-title" > Good morning, Admin🌿 < /div> <
-        div className = "page-sub" > Nairobi• { new Date().toDateString() } < /div> <
-        /div> <
+        div className = "page-sub" > Nairobi• { new Date().toDateString() } < /div> < /
+        div > <
         div className = "flex gap-8" >
         <
         button className = "btn btn-outline" > Export Report < /button> <
-        button className = "btn btn-primary" > +New Order < /button> <
-        /div> <
+        button className = "btn btn-primary" > +New Order < /button> < /
+        div > <
         /div>
 
         { /* STAT CARDS */ } <
@@ -78,41 +78,42 @@ export default function Dashboard() {
         /> Total Orders</div >
         <
         div className = "stat-value" > { stats.totalOrders || 247 } < /div> <
-        div className = "stat-change up" > ↑18 % this week < /div> <
-        /div> <
+        div className = "stat-change up" > ↑18 % this week < /div> < /
+        div > <
         div className = "stat-card" >
         <
         div className = "stat-label flex gap-8" > < TrendingUp size = { 14 }
         /> Revenue (KES)</div >
         <
         div className = "stat-value" > {
-            (stats.revenue || 84320).toLocaleString() } < /div> <
-        div className = "stat-change up" > ↑12 % this month < /div> <
-        /div> <
+            (stats.revenue || 84320).toLocaleString()
+        } < /div> <
+        div className = "stat-change up" > ↑12 % this month < /div> < /
+        div > <
         div className = "stat-card" >
         <
         div className = "stat-label flex gap-8" > < TrendingUp size = { 14 }
         /> Net Profit</div >
         <
         div className = "stat-value" > 31, 950 < /div> <
-        div className = "stat-change up" > Margin: 38 % < /div> <
-        /div> <
+        div className = "stat-change up" > Margin: 38 % < /div> < /
+        div > <
         div className = "stat-card" >
         <
         div className = "stat-label flex gap-8" > < AlertTriangle size = { 14 }
         /> Out of Stock</div >
         <
         div className = "stat-value" > { stats.outOfStock || 3 } < /div> <
-        div className = "stat-change down" > ↑1 since yesterday < /div> <
-        /div> <
+        div className = "stat-change down" > ↑1 since yesterday < /div> < /
+        div > <
         div className = "stat-card" >
         <
         div className = "stat-label flex gap-8" > < Star size = { 14 }
         /> Satisfaction</div >
         <
         div className = "stat-value" > { stats.satisfaction } < /div> <
-        div className = "stat-change up" > Based on 89 reviews < /div> <
-        /div> <
+        div className = "stat-change up" > Based on 89 reviews < /div> < /
+        div > <
         /div>
 
         { /* CHARTS ROW */ } <
@@ -122,8 +123,8 @@ export default function Dashboard() {
         <
         div className = "card-header" >
         <
-        div className = "card-title" > Weekly Sales(KES) < /div> <
-        /div> <
+        div className = "card-title" > Weekly Sales(KES) < /div> < /
+        div > <
         div className = "card-body" >
         <
         ResponsiveContainer width = "100%"
@@ -133,22 +134,26 @@ export default function Dashboard() {
         <
         XAxis dataKey = "day"
         tick = {
-            { fontSize: 11 } }
+            { fontSize: 11 }
+        }
         /> <
         YAxis tick = {
-            { fontSize: 11 } }
+            { fontSize: 11 }
+        }
         /> <
         Tooltip formatter = {
-            (v) => `KES ${v.toLocaleString()}` }
+            (v) => `KES ${v.toLocaleString()}`
+        }
         /> <
         Bar dataKey = "sales"
         fill = "#2d8a45"
         radius = {
-            [4, 4, 0, 0] }
-        /> <
-        /BarChart> <
-        /ResponsiveContainer> <
-        /div> <
+            [4, 4, 0, 0]
+        }
+        /> < /
+        BarChart > <
+        /ResponsiveContainer> < /
+        div > <
         /div>
 
         <
@@ -156,8 +161,8 @@ export default function Dashboard() {
         <
         div className = "card-header" >
         <
-        div className = "card-title" > 12 - Month Growth < /div> <
-        /div> <
+        div className = "card-title" > 12 - Month Growth < /div> < /
+        div > <
         div className = "card-body" >
         <
         ResponsiveContainer width = "100%"
@@ -167,25 +172,28 @@ export default function Dashboard() {
         <
         XAxis dataKey = "month"
         tick = {
-            { fontSize: 11 } }
+            { fontSize: 11 }
+        }
         /> <
         YAxis tick = {
-            { fontSize: 11 } }
+            { fontSize: 11 }
+        }
         /> <
         Tooltip formatter = {
-            (v) => `KES ${v.toLocaleString()}` }
+            (v) => `KES ${v.toLocaleString()}`
+        }
         /> <
         Line type = "monotone"
         dataKey = "sales"
         stroke = "#2d8a45"
         strokeWidth = { 2 }
         dot = { false }
-        /> <
-        /LineChart> <
-        /ResponsiveContainer> <
-        /div> <
-        /div> <
-        /div>
+        /> < /
+        LineChart > <
+        /ResponsiveContainer> < /
+        div > <
+        /div> < /
+        div >
 
         { /* RECENT ORDERS */ } <
         div className = "card mb-16" >
@@ -197,8 +205,9 @@ export default function Dashboard() {
         <
         button className = "btn btn-outline"
         style = {
-            { fontSize: '11px', padding: '4px 10px' } } > View all < /button> <
-        /div> <
+            { fontSize: '11px', padding: '4px 10px' }
+        } > View all < /button> < /
+        div > <
         div className = "table-wrap" >
         <
         table >
@@ -213,24 +222,27 @@ export default function Dashboard() {
         th > Amount < /th> <
         th > Rider < /th> <
         th > Status < /th> <
-        th > Time < /th> <
-        /tr> <
+        th > Time < /th> < /
+        tr > <
         /thead> <
         tbody > {
             orders.length > 0 ? orders.map(o => ( <
                 tr key = { o.id } >
                 <
                 td style = {
-                    { fontWeight: 600 } } > ORD - { String(o.id).padStart(4, '0') } < /td> <
+                    { fontWeight: 600 }
+                } > ORD - { String(o.id).padStart(4, '0') } < /td> <
                 td > { o.customers ? .name || 'Grace Wanjiku' } < /td> <
                 td className = "text-muted" > { o.items || 'Tomatoes, Kales' } < /td> <
                 td style = {
-                    { fontWeight: 700 } } > KES {
-                    (o.total_amount || 450).toLocaleString() } < /td> <
+                    { fontWeight: 700 }
+                } > KES {
+                    (o.total_amount || 450).toLocaleString()
+                } < /td> <
                 td > { o.riders ? .name || 'John M.' } < /td> <
                 td > { statusPill(o.status || 'pending') } < /td> <
-                td className = "text-muted" > { new Date(o.created_at).toLocaleTimeString() } < /td> <
-                /tr>
+                td className = "text-muted" > { new Date(o.created_at).toLocaleTimeString() } < /td> < /
+                tr >
             )) : (
                 // Sample rows when database is empty
                 [
@@ -242,22 +254,24 @@ export default function Dashboard() {
                     tr key = { o.id } >
                     <
                     td style = {
-                        { fontWeight: 600 } } > ORD - { o.id } < /td> <
+                        { fontWeight: 600 }
+                    } > ORD - { o.id } < /td> <
                     td > { o.customer } < /td> <
                     td className = "text-muted" > { o.items } < /td> <
                     td style = {
-                        { fontWeight: 700 } } > KES { o.amount } < /td> <
+                        { fontWeight: 700 }
+                    } > KES { o.amount } < /td> <
                     td > { o.rider } < /td> <
                     td > { statusPill(o.status) } < /td> <
-                    td className = "text-muted" > { o.time } < /td> <
-                    /tr>
+                    td className = "text-muted" > { o.time } < /td> < /
+                    tr >
                 ))
             )
         } <
-        /tbody> <
-        /table> <
-        /div> <
-        /div>
+        /tbody> < /
+        table > <
+        /div> < /
+        div >
 
         { /* BOTTOM ROW — Top Products + Profit */ } <
         div className = "grid-2" >
@@ -268,7 +282,8 @@ export default function Dashboard() {
         /> Top Selling Products</div > < /div> <
         div className = "card-body"
         style = {
-            { padding: '10px 18px' } } > {
+            { padding: '10px 18px' }
+        } > {
             [
                 { rank: 1, name: 'Avocados', units: 124, amount: '6,200', pct: 100 },
                 { rank: 2, name: 'Sukuma Wiki', units: 98, amount: '2,940', pct: 79 },
@@ -278,34 +293,42 @@ export default function Dashboard() {
             ].map(p => ( <
                 div key = { p.rank }
                 style = {
-                    { display: 'flex', alignItems: 'center', gap: 10, padding: '8px 0', borderBottom: '1px solid var(--g5)' } } >
+                    { display: 'flex', alignItems: 'center', gap: 10, padding: '8px 0', borderBottom: '1px solid var(--g5)' }
+                } >
                 <
                 div style = {
-                    { width: 22, height: 22, borderRadius: '50%', background: p.rank === 1 ? '#fef3c7' : 'var(--g5)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 10, fontWeight: 700, color: p.rank === 1 ? '#92400e' : 'var(--g2)', flexShrink: 0 } } > { p.rank } < /div> <
+                    { width: 22, height: 22, borderRadius: '50%', background: p.rank === 1 ? '#fef3c7' : 'var(--g5)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 10, fontWeight: 700, color: p.rank === 1 ? '#92400e' : 'var(--g2)', flexShrink: 0 }
+                } > { p.rank } < /div> <
                 div style = {
-                    { flex: 1 } } >
+                    { flex: 1 }
+                } >
                 <
                 div style = {
-                    { fontSize: 12, fontWeight: 600 } } > { p.name } < /div> <
+                    { fontSize: 12, fontWeight: 600 }
+                } > { p.name } < /div> <
                 div style = {
-                    { fontSize: 10, color: 'var(--text3)' } } > { p.units }
+                    { fontSize: 10, color: 'var(--text3)' }
+                } > { p.units }
                 units sold < /div> <
                 div className = "progress-wrap" > < div className = "progress-fill"
                 style = {
-                    { width: `${p.pct}%`, background: 'var(--g3)' } } > < /div></div >
+                    { width: `${p.pct}%`, background: 'var(--g3)' }
+                } > < /div></div >
                 <
                 /div> <
                 div style = {
-                    { fontSize: 12, fontWeight: 700 } } > KES { p.amount } < /div> <
-                /div>
+                    { fontSize: 12, fontWeight: 700 }
+                } > KES { p.amount } < /div> < /
+                div >
             ))
         } <
-        /div> <
-        /div>
+        /div> < /
+        div >
 
         <
         div style = {
-            { display: 'flex', flexDirection: 'column', gap: 14 } } >
+            { display: 'flex', flexDirection: 'column', gap: 14 }
+        } >
         <
         div className = "card" >
         <
@@ -313,7 +336,8 @@ export default function Dashboard() {
         <
         div className = "card-body"
         style = {
-            { padding: '10px 18px' } } > {
+            { padding: '10px 18px' }
+        } > {
             [
                 { label: 'Gross Revenue', value: 'KES 84,320', color: 'var(--text1)' },
                 { label: 'Cost of Goods', value: '− KES 45,130', color: 'var(--red)' },
@@ -321,25 +345,31 @@ export default function Dashboard() {
             ].map(r => ( <
                 div key = { r.label }
                 style = {
-                    { display: 'flex', justifyContent: 'space-between', padding: '7px 0', borderBottom: '1px solid var(--g5)', fontSize: 13 } } >
+                    { display: 'flex', justifyContent: 'space-between', padding: '7px 0', borderBottom: '1px solid var(--g5)', fontSize: 13 }
+                } >
                 <
                 span style = {
-                    { color: 'var(--text2)' } } > { r.label } < /span> <
+                    { color: 'var(--text2)' }
+                } > { r.label } < /span> <
                 span style = {
-                    { fontWeight: 700, color: r.color } } > { r.value } < /span> <
-                /div>
+                    { fontWeight: 700, color: r.color }
+                } > { r.value } < /span> < /
+                div >
             ))
         } <
         div style = {
-            { display: 'flex', justifyContent: 'space-between', padding: '10px 0 4px', fontSize: 14, borderTop: '2px solid var(--g3)', marginTop: 4 } } >
+            { display: 'flex', justifyContent: 'space-between', padding: '10px 0 4px', fontSize: 14, borderTop: '2px solid var(--g3)', marginTop: 4 }
+        } >
         <
         span style = {
-            { fontWeight: 700 } } > Net Profit < /span> <
+            { fontWeight: 700 }
+        } > Net Profit < /span> <
         span style = {
-            { fontWeight: 700, color: 'var(--g2)', fontSize: 16 } } > KES 31, 950 < /span> <
-        /div> <
-        /div> <
-        /div>
+            { fontWeight: 700, color: 'var(--g2)', fontSize: 16 }
+        } > KES 31, 950 < /span> < /
+        div > <
+        /div> < /
+        div >
 
         <
         div className = "card" >
@@ -350,34 +380,43 @@ export default function Dashboard() {
         <
         div className = "grid-2"
         style = {
-            { gap: 10 } } >
+            { gap: 10 }
+        } >
         <
         div style = {
-            { background: 'var(--g5)', borderRadius: 8, padding: 12, textAlign: 'center' } } >
+            { background: 'var(--g5)', borderRadius: 8, padding: 12, textAlign: 'center' }
+        } >
         <
         div style = {
-            { fontSize: 10, color: 'var(--text3)', fontWeight: 600, marginBottom: 4 } } > TODAY < /div> <
+            { fontSize: 10, color: 'var(--text3)', fontWeight: 600, marginBottom: 4 }
+        } > TODAY < /div> <
         div style = {
-            { fontSize: 20, fontWeight: 700, fontFamily: 'var(--serif)' } } > 12, 450 < /div> <
+            { fontSize: 20, fontWeight: 700, fontFamily: 'var(--serif)' }
+        } > 12, 450 < /div> <
         div style = {
-            { fontSize: 10, color: 'var(--g2)' } } > 28 transactions < /div> <
-        /div> <
+            { fontSize: 10, color: 'var(--g2)' }
+        } > 28 transactions < /div> < /
+        div > <
         div style = {
-            { background: 'var(--g5)', borderRadius: 8, padding: 12, textAlign: 'center' } } >
+            { background: 'var(--g5)', borderRadius: 8, padding: 12, textAlign: 'center' }
+        } >
         <
         div style = {
-            { fontSize: 10, color: 'var(--text3)', fontWeight: 600, marginBottom: 4 } } > THIS MONTH < /div> <
+            { fontSize: 10, color: 'var(--text3)', fontWeight: 600, marginBottom: 4 }
+        } > THIS MONTH < /div> <
         div style = {
-            { fontSize: 20, fontWeight: 700, fontFamily: 'var(--serif)' } } > 84, 320 < /div> <
+            { fontSize: 20, fontWeight: 700, fontFamily: 'var(--serif)' }
+        } > 84, 320 < /div> <
         div style = {
-            { fontSize: 10, color: 'var(--g2)' } } > 247 transactions < /div> <
-        /div> <
-        /div> <
-        /div> <
-        /div> <
-        /div> <
-        /div> <
-        /div>
+            { fontSize: 10, color: 'var(--g2)' }
+        } > 247 transactions < /div> < /
+        div > <
+        /div> < /
+        div > <
+        /div> < /
+        div > <
+        /div> < /
+        div >
     )
 }
 
